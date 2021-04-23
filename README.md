@@ -1,0 +1,3 @@
+- 框架：Django
+- 语言：Python
+- 算法：Item-to-Item CF
