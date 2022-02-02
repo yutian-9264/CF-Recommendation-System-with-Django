@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<em><a href="{% url 'Recommendation' %}">Check the movies you have rated</a></em>
+<br/><br/><br/>
+Recommend for you:
+{% for i in rec_list %}
+    <ul>
+    <li>{{ i }}</li>
+{#    {% for q in movie_poster1 %}#}
+{#        <img src=" {{ q }} " alt=" " width="303" height="450">#}
+{#    {% endfor %}#}
+{#    <img src=" {{ q }} " alt=" " width="303" height="450">#}
+    </ul>
+{% endfor %}
+    <div id="main" style="width: 600px;height:400px;"></div>
+</body>
+{% endblock content %}
+</html>

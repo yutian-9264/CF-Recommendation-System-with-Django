@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}<ul>
+    <li>
+        movieid: {{ movie_detail.movieId }}
+    </li>
+    <li>
+        title: {{ movie_detail.title }}
+    </li>
+    <br/>
+    {{ mmovie_poster1 }}
+    <img src=" {{ movie_poster1 }} " alt=" " width="303" height="450">
+</ul>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label>
+        <select name="star_ratings">
+            <option value="1" name="one">1 star</option>
+            <option value="2" name="two">2 stars</option>
+            <option value="3" name="three">3 stars</option>
+            <option value="4" name="four">4 stars</option>
+            <option value="5" name="five">5 stars</option>
+        </select>
+    </label>
+    <button type="submit">SAVE</button>
+</form>
+<em><a href="{% url 'Rate' %}">Back</a></em>
+{% if messages  %}
+    {% for msg in messages %}
+        <b>{{ msg }}</b>
+    {% endfor %}
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="basetext1"><h1>打分页面</h1></div>
+{#<input type="submit" name="search" value="搜索" size="30" style="float: left" />#}
+{#<input type="text" name="data" style="width: 10%;" />#}
+<br/>
+<a href="{% url 'Logout' %}">logout</a>
+<br/>
+<br/>
+
+
+Check the movies you have rated
+
+<a href="{% url 'Recommendation' %}"><em>Check</em></a>
+<br/>
+{%for m in movies%}
+    <ul>
+        <li>
+            {{m.movieId}}&nbsp&nbsp <a href="{{m.id  }}">{{m.title}}</a>&nbsp;&nbsp;{{ m.genres }}
+        </li>
+    </ul>
+{%endfor%}
+
+{% endblock content %}

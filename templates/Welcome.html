@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+{% block content %}
+
+    <p>Movie Recommenation System</p>
+
+    <div class="target" id="target-1">
+        <div>
+            <div><img src="/static/img/your name3.png" alt=""></div>
+            <div><img src="/static/img/your name4.png" alt=""></div>
+            
+            <div><img src="/static/img/shape of voice1.png" alt=""></div>
+            <div><img src="/static/img/shape of voice2.png" alt=""></div>
+            <div><img src="/static/img/your name1.png" alt=""></div>
+            <div><img src="/static/img/your name2.png" alt=""></div>
+            <div><img src="/static/img/ironman2.png" alt=""></div>
+        </div>
+
+    </div>
+    <div class="p2"><a href="{% url 'Index' %}" >Enter and Try</a></div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/HappyImage.min.js"></script>
+    <script>
+        $("#target-1").HappyImage({
+            effect: "slide",
+            autoplay: 2000
+        });
+    </script>
+{% endblock content %}
+
+
+</html>

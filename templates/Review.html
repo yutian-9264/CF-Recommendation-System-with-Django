@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<ul>
+    <li>
+        Taylor Swift
+    </li>
+    <form action="" method="post">
+        {% csrf_token %}
+        {%for rec in list_1 %}
+            <li>
+                {{ rec}}
+                <label>
+                    <select name="starratings">
+                        <option value="onestar" name="one">1 star</option>
+                        <option value="twostars" name="two">2 stars</option>
+                        <option value="threestars" name="three">3 stars</option>
+                        <option value="fourstars" name="four">4 stars</option>
+                        <option value="fivestars" name="five">5 stars</option>
+                    </select>
+                </label>
+            </li>
+            {#            {% i=0,i+=1 %}#}
+        {% endfor %}
+        <label>
+            {#            <select name="starratings1">#}
+            {#                <option value="onestar" name="one">1 star</option>#}
+            {#                <option value="twostars" name="two">2 stars</option>#}
+            {#                <option value="threestars" name="three">3 stars</option>#}
+            {#                <option value="fourstars" name="four">4 stars</option>#}
+            {#                <option value="fivestars" name="five">5 stars</option>#}
+            {#            </select>#}
+            {#            <select name="starratings2">#}
+            {#                <option value="onestar" name="one">1 star</option>#}
+            {#                <option value="twostars" name="two">2 stars</option>#}
+            {#                <option value="threestars" name="three">3 stars</option>#}
+            {#                <option value="fourstars" name="four">4 stars</option>#}
+            {#                <option value="fivestars" name="five">5 stars</option>#}
+            {#            </select>#}
+            {#            <select name="starratings3">#}
+            {#                <option value="onestar" name="one">1 star</option>#}
+            {#                <option value="twostars" name="two">2 stars</option>#}
+            {#                <option value="threestars" name="three">3 stars</option>#}
+            {#                <option value="fourstars" name="four">4 stars</option>#}
+            {#                <option value="fivestars" name="five">5 stars</option>#}
+            {#            </select>#}
+            {#            <select name="starratings4">#}
+            {#                <option value="onestar" name="one">1 star</option>#}
+            {#                <option value="twostars" name="two">2 stars</option>#}
+            {#                <option value="threestars" name="three">3 stars</option>#}
+            {#                <option value="fourstars" name="four">4 stars</option>#}
+            {#                <option value="fivestars" name="five">5 stars</option>#}
+            {#            </select>#}
+            {#            <select name="starratings5">#}
+            {#                <option value="onestar" name="one">1 star</option>#}
+            {#                <option value="twostars" name="two">2 stars</option>#}
+            {#                <option value="threestars" name="three">3 stars</option>#}
+            {#                <option value="fourstars" name="four">4 stars</option>#}
+            {#                <option value="fivestars" name="five">5 stars</option>#}
+            {#            </select>#}
+        </label>
+        <button type="submit">SAVE</button>
+    </form>
+    {% if messages  %}
+        {% for msg in messages %}
+            <b>{{ msg }}</b>
+        {% endfor %}
+    {% endif %}
+</ul>
+{% endblock content %}
+</body>
+</html>

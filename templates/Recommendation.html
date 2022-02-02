@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>#}
+
+</head>
+<body>
+{% block content %}
+<br/>
+{#{% if request.session.Email  %}#}
+Movies you rated:
+<em><a href="{% url 'Rate' %}">Choose more movies to rate</a></em>
+{#&nbsp;&nbsp; #}
+<br/>
+<em><a href="{% url 'GetRec' %}">Get recommendation</a></em>
+<br/>
+{%  for i in movierated_list%}
+    <ul>
+        <li>
+            <b>{{ i }}</b>
+        </li>
+    </ul>
+
+{% endfor %}
+
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+{#{% else if %}#}
+{#    <a href="{% url 'Login' %}">login</a>#}
+{#{% endif %}#}
+{% endblock content %}
+
+
+</body>
+</html>

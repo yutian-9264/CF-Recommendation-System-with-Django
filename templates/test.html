@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+{#    <link rel="stylesheet" type="text/css" href="/static/css/login.css">#}
+</head>
+<body>
+{% block content %}
+
+<div class="basetext1"><h1>登录页面</h1></div>
+    <hr/>
+
+<div id="content">
+{#    <div class="login-header">#}
+{#        <img src="assets/images/logo">#}
+{#    </div>#}
+    <div class="p2">Welcome</div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="login-input-box">
+{#            <span class="icon icon-user"></span>#}
+            <input type="text" placeholder="Please enter your email/phone">
+        </div>
+        <div class="login-input-box">
+{#            <span class="icon icon-password"></span>#}
+            <input type="password" placeholder="Please enter your password">
+        </div>
+    </form>
+    <div class="login-button-box">
+        <button type="submit">Login</button>
+    </div>
+    <div class="logon-box">
+        <a href="{% url 'Reg' %}">Register</a>
+    </div>
+    <br/>
+    {% if messages %}
+            {% for msg in messages %}
+                <b>{{ msg }}</b>
+            {% endfor %}
+        {% endif %}
+</div>
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block content %}
+<body>
+<div class="basetext1"><h1>主页</h1></div>
+<hr/>
+<div class="basetext1">
+{% if request.session.Email  %}
+    {{ request.session.Email }} &nbsp;&nbsp; <a href="{% url 'Logout' %}">logout</a>
+    <br/>
+    <a href="{% url 'Rate' %}">Go_to_Rate</a>
+</div>
+{% else %}
+<b>
+<div class="basetext1">
+<a href="{% url 'Reg' %}">Registration</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+<a href="{% url 'Loginpage' %}">Login</a>
+</div>
+</b>
+{% endif %}
+</body>
+{% endblock content %}
+</html>
