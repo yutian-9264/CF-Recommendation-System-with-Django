@@ -10,8 +10,8 @@
 ![](C:\Users\14212\Desktop\Photo\6.png)
 
 ![8](C:\Users\14212\Desktop\Photo\8.png)
-
-
+(static\img\your name1.png)
+(static/img/your name1.png)
 
 
 
