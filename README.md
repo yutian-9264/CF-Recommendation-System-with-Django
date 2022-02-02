@@ -2,7 +2,7 @@
 - 语言：Python
 - 算法：Item-to-Item CF
 
-毕设项目，采用MovieLens 数据集（https://files.grouplens.org/datasets/movielens/ml-latest-small-README.html),由 610 名用户对 9742 部电影的 100836 个打分组成，评分
+毕设项目，采用MovieLens 数据集（https://files.grouplens.org/datasets/movielens/ml-latest-small-README.html) ,由 610 名用户对 9742 部电影的 100836 个打分组成，评分
 从 0.5 分到 5.0 分，0.5 分一个间隔，打分时间是 1996 年至 2018 年。
 
 <br>**算法处理后的相似度数据如下：**
